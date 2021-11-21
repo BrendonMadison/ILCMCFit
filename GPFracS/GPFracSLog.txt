@@ -1,0 +1,706 @@
+[0mroot [2] .x GPFracSFit.C
+[0m
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+Using the database db and model sigAdd1
+Number events: 86371
+Number events after cuts: 63649
+TFile**		temp.root	
+ TFile*		temp.root	
+  KEY: RooDataHist	db;1	db
+  KEY: TProcessID	ProcessID0;1	4b6d8a36-47ce-11ec-96d6-57a8a983beef
+  KEY: RooAddPdf	sigAdd1;1	GP Beams. Beta Inv
+  KEY: RooRealVar	bsx;1	Fractional #sqrt{s} [1 - #sqrt{s}/(250 GeV)]^{#eta}
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(lin_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Alpha_1      1.00000e+00  5.00000e-01    1.00000e-09  1.00000e+04
+     2 Alpha_2      1.00000e-02  5.00000e-03    1.00000e-09  1.00000e+04
+     3 alpha_1      1.24000e+00  1.50000e-01    5.00000e-01  2.00000e+00
+     4 gamma_1      4.00000e+01  4.20000e+00    8.00000e+00  5.00000e+01
+ **********
+ **    3 **SET ERR           1
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        2000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=1.79346e+06 FROM MIGRAD    STATUS=INITIATE       84 CALLS          85 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      1.00000e+00   5.00000e-01   0.00000e+00  -1.69819e+08
+   2  Alpha_2      1.00407e+00   5.00000e-03   0.00000e+00  -1.79414e+08
+   3  alpha_1      9.72470e-01   1.50000e-01   0.00000e+00   1.10770e+07
+   4  gamma_1      1.83449e+01   4.20000e+00  -1.08346e+00   1.83225e+04
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 2 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 4 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1.00039 added to diagonal of error matrix
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=231.957 FROM HESSE     STATUS=OK             29 CALLS         622 TOTAL
+                     EDM=0.00660105    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      6.57052e+03   3.23967e+02   1.11618e-03  -3.48868e-02
+   2  Alpha_2      9.04718e+03   4.44168e+02   3.53879e-03   1.05337e+00
+   3  alpha_1      1.15405e+00   1.71661e-03   2.18107e-03  -1.44762e+00
+   4  gamma_1      4.12731e+01   4.05682e-01   1.39024e-04  -1.56874e-01
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=176.085 FROM MIGRAD    STATUS=FAILED        998 CALLS         999 TOTAL
+                     EDM=0.755871    STRATEGY= 1  ERROR MATRIX UNCERTAINTY  24.8 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      2.19891e+02   3.90422e+01  -0.00000e+00  -2.14987e+02
+   2  Alpha_2      3.05212e+02   5.36146e+01   0.00000e+00  -2.20595e+02
+   3  alpha_1      1.15627e+00   1.61712e-03   0.00000e+00  -2.60738e+01
+   4  gamma_1      4.26909e+01   4.37314e-01  -0.00000e+00  -5.61109e+00
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  4    ERR DEF=1
+  1.525e+03 -2.093e+03  7.713e-03  8.271e+00 
+ -2.093e+03  2.875e+03 -9.686e-03 -1.117e+01 
+  7.713e-03 -9.686e-03  2.615e-06  3.554e-04 
+  8.271e+00 -1.117e+01  3.554e-04  1.913e-01 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4
+        1  0.99964   1.000 -1.000  0.122  0.484
+        2  0.99963  -1.000  1.000 -0.112 -0.476
+        3  0.56192   0.122 -0.112  1.000  0.502
+        4  0.66875   0.484 -0.476  0.502  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **    7 **SET ERR           1
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        2000
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=176.085 FROM HESSE     STATUS=OK             27 CALLS        1026 TOTAL
+                     EDM=0.0819042    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Alpha_1      2.19891e+02   4.03279e+00   1.11542e-03  -2.33921e+03
+   2  Alpha_2      3.05212e+02   5.50818e+00   3.53776e-03   7.41922e+03
+   3  alpha_1      1.15627e+00   1.72881e-03   2.18107e-03   4.57403e+03
+   4  gamma_1      4.26909e+01   4.18277e-01   1.35882e-04   6.35420e+01
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  4    ERR DEF=1
+  1.626e+01 -2.132e+01  9.757e-04  2.536e-01 
+ -2.132e+01  3.034e+01 -2.084e-04 -1.382e-01 
+  9.757e-04 -2.084e-04  2.989e-06  4.431e-04 
+  2.536e-01 -1.382e-01  4.431e-04  1.750e-01 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4
+        1  0.96760   1.000 -0.960  0.140  0.150
+        2  0.96684  -0.960  1.000 -0.022 -0.060
+        3  0.65629   0.140 -0.022  1.000  0.613
+        4  0.61951   0.150 -0.060  0.613  1.000
+[#1] INFO:InputArguments -- RooAbsData::plotOn(db) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(lin_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(lin_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+Reduced ChiSq: 174.986 / 94
+Kolmogorov-Smirnov test result:1.46474e-10
+#splitline{#Alpha_{1} Beta(x^{#eta},#alpha_{1} , #gamma_{2})}{ + #Alpha_{2} #Theta(x-0.5) / x^{3}}
+#Alpha_{1} = 2.20e+02 +- 4.03e+00
+#Alpha_{2} = 3.05e+02 +- 5.51e+00
+#alpha_{1} = 1.16e+00 +- 1.73e-03
+#eta = 6.00e+00 +- 0.00e+00
+#gamma_{1} = 4.27e+01 +- 4.18e-01
+Using the database db and model sigAdd2
+Number events: 86371
+Number events after cuts: 63649
+TFile**		temp.root	
+ TFile*		temp.root	
+  KEY: RooDataHist	db;1	db
+  KEY: TProcessID	ProcessID0;1	4b6d8a36-47ce-11ec-96d6-57a8a983beef
+  KEY: RooAddPdf	sigAdd2;1	GP Beams. Circe
+  KEY: RooRealVar	bsx;1	Fractional #sqrt{s} [1 - #sqrt{s}/(250 GeV)]^{#eta}
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Alpha_1      1.00000e+00  5.00000e-01    1.00000e-09  1.00000e+04
+     2 alpha_1      1.24000e+00  1.50000e-01    5.00000e-01  2.00000e+00
+     3 gamma_1      4.00000e+01  4.20000e+00    8.00000e+00  5.00000e+01
+ **********
+ **    3 **SET ERR           1
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        1500           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=7.32415e+06 FROM MIGRAD    STATUS=INITIATE       41 CALLS          42 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      1.38153e+01   5.00000e-01   0.00000e+00  -9.31323e-10
+   2  alpha_1      1.24000e+00   1.50000e-01   0.00000e+00   8.18195e+07
+   3  gamma_1      2.60981e+01   4.20000e+00  -6.89944e-01   2.04853e+05
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=47422.7 FROM MIGRAD    STATUS=CONVERGED     180 CALLS         181 TOTAL
+                     EDM=9.51174e-05    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   0.0 per cent
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      3.89267e+03   7.22621e+03   1.54187e-04   2.91038e-11
+   2  alpha_1      8.76004e-01   1.08596e-03  -6.39953e-06   1.08924e+00
+   3  gamma_1      8.02846e+00   2.11585e-01   5.85661e-04  -2.05003e-01
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  3    ERR DEF=1
+  3.191e+15  3.135e+00 -4.790e+02 
+  3.135e+00  1.179e-06 -1.299e-04 
+ -4.790e+02 -1.299e-04  2.415e-02 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3
+        1  0.00006   1.000  0.000 -0.000
+        2  0.76957   0.000  1.000 -0.770
+        3  0.76957  -0.000 -0.770  1.000
+ **********
+ **    7 **SET ERR           1
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        1500
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=47422.7 FROM HESSE     STATUS=OK             20 CALLS         201 TOTAL
+                     EDM=6.74369e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Alpha_1      3.89267e+03   7.03110e+03   5.00000e-01  -2.23317e-01
+   2  alpha_1      8.76004e-01   8.82488e-04   1.17235e-04  -5.22053e-01
+   3  gamma_1      8.02846e+00   1.05469e-01   8.23847e-03  -1.62287e+00
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  3    ERR DEF=1
+  8.169e+17  3.510e+01 -4.581e+02 
+  3.510e+01  7.788e-07 -5.438e-05 
+ -4.581e+02 -5.438e-05  1.116e-02 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3
+        1  0.00005   1.000  0.000 -0.000
+        2  0.58337   0.000  1.000 -0.583
+        3  0.58337  -0.000 -0.583  1.000
+[#1] INFO:InputArguments -- RooAbsData::plotOn(db) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+Reduced ChiSq: 47485.4 / 95
+Kolmogorov-Smirnov test result:0.00413112
+#Alpha_{1} Beta(x^{#eta},#alpha_{1} , #gamma_{1})
+#Alpha_{1} = 3.89e+03 +- 7.03e+03
+#alpha_{1} = 8.76e-01 +- 8.82e-04
+#eta = 6.00e+00 +- 0.00e+00
+#gamma_{1} = 8.03e+00 +- 1.05e-01
+Using the database db and model sigAdd3
+Number events: 86371
+Number events after cuts: 63649
+TFile**		temp.root	
+ TFile*		temp.root	
+  KEY: RooDataHist	db;1	db
+  KEY: TProcessID	ProcessID0;1	4b6d8a36-47ce-11ec-96d6-57a8a983beef
+  KEY: RooAddPdf	sigAdd3;1	GP Beams. 2 Inv. Gauss
+  KEY: RooRealVar	bsx;1	Fractional #sqrt{s} [1 - #sqrt{s}/(250 GeV)]^{#eta}
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun3_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Alpha_1      1.00000e+00  5.00000e-01    1.00000e-09  1.00000e+04
+     2 Alpha_2      1.00000e-02  5.00000e-03    1.00000e-09  1.00000e+04
+     3 lambda_1     1.00000e+00  5.00000e-01    0.00000e+00  2.00000e+01
+     4 lambda_2     2.00000e+00  1.00000e+00    0.00000e+00  2.00000e+01
+     5 mu_1         5.00000e+00  2.50000e+00    0.00000e+00  5.00000e+01
+     6 mu_2         2.00000e+00  1.00000e+00    0.00000e+00  5.00000e+01
+ **********
+ **    3 **SET ERR           1
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=19422.5 FROM MIGRAD    STATUS=INITIATE      261 CALLS         262 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      1.27952e-06   5.00000e-01  -1.20637e-05** at limit **
+   2  Alpha_2      1.10521e-06   5.00000e-03   0.00000e+00** at limit **
+   3  lambda_1     1.00000e+00   5.00000e-01   0.00000e+00   2.60590e+04
+   4  lambda_2     5.19047e+00   1.00000e+00   0.00000e+00  -4.14451e+03
+   5  mu_1         2.93209e-01   2.50000e+00   0.00000e+00  -2.95056e+05
+   6  mu_2         3.26369e-01   1.00000e+00   0.00000e+00  -1.26200e+06
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=2595.88 FROM HESSE     STATUS=OK             44 CALLS         526 TOTAL
+                     EDM=0.0338247    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      9.09849e-07   5.65684e-08   7.49005e-07** at limit **
+   2  Alpha_2      1.48565e-06   7.33130e-08   7.49002e-07** at limit **
+   3  lambda_1     1.00177e+00   2.03228e-02   9.25213e-05  -2.71444e+01
+   4  lambda_2     7.96959e+00   1.39289e-01   1.72374e-04   1.43132e+01
+   5  mu_1         2.48959e-01   2.56902e-03   7.71994e-06  -5.30274e+02
+   6  mu_2         4.21693e-01   9.87861e-04   2.87618e-06   7.81734e+02
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 2 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1 added to diagonal of error matrix
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=2595.86 FROM MIGRAD    STATUS=FAILED        550 CALLS         551 TOTAL
+                     EDM=0.898012    STRATEGY= 1  ERROR MATRIX UNCERTAINTY   9.2 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      9.14845e-07   6.14921e+03   0.00000e+00** at limit **
+   2  Alpha_2      1.48926e-06   6.14919e+03   0.00000e+00** at limit **
+   3  lambda_1     1.00296e+00   1.02315e+01   0.00000e+00  -6.25964e+00
+   4  lambda_2     7.98333e+00   1.45847e+01  -0.00000e+00   5.02782e+00
+   5  mu_1         2.49285e-01   2.92072e+01  -0.00000e+00   2.54777e+01
+   6  mu_2         4.21748e-01   2.87254e+01  -0.00000e+00   1.38110e+02
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=1
+  9.138e-03 -5.075e-16  3.242e-11 -7.420e-10  1.241e-11  5.958e-12 
+ -5.075e-16  1.488e-02 -1.143e-10  1.571e-09 -2.963e-11 -9.156e-12 
+  3.242e-11 -1.143e-10  1.905e+01 -9.042e-04  2.459e-06  1.036e-05 
+ -7.420e-10  1.571e-09 -9.042e-04  9.595e+01 -1.068e-04 -8.868e-05 
+  1.241e-11 -2.963e-11  2.459e-06 -1.068e-04  1.240e+01  6.477e-07 
+  5.958e-12 -9.156e-12  1.036e-05 -8.868e-05  6.477e-07  2.091e+01 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.00000   1.000 -0.000  0.000 -0.000  0.000  0.000
+        2  0.00000  -0.000  1.000 -0.000  0.000 -0.000 -0.000
+        3  0.00002   0.000 -0.000  1.000 -0.000  0.000  0.000
+        4  0.00002  -0.000  0.000 -0.000  1.000 -0.000 -0.000
+        5  0.00000   0.000 -0.000  0.000 -0.000  1.000  0.000
+        6  0.00000   0.000 -0.000  0.000 -0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **    7 **SET ERR           1
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        3000
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=2595.86 FROM HESSE     STATUS=OK             44 CALLS         595 TOTAL
+                     EDM=0.0417933    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Alpha_1      9.14845e-07   5.66680e-08   7.49005e-07  -1.57078e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   2  Alpha_2      1.48926e-06   7.34113e-08   7.49002e-07  -1.57077e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   3  lambda_1     1.00296e+00   2.03481e-02   9.25111e-05  -1.11909e+00
+   4  lambda_2     7.98333e+00   1.39523e-01   1.72376e-04  -2.93853e+00
+   5  mu_1         2.49285e-01   2.55852e-03   7.71985e-06  -1.42946e+00
+   6  mu_2         4.21748e-01   9.87793e-04   2.87620e-06  -1.38685e+00
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=1
+  3.211e-15  3.708e-15  1.926e-10 -3.463e-09  9.731e-11  1.687e-11 
+  3.708e-15  5.389e-15  5.216e-12 -1.044e-09  6.161e-11  1.398e-12 
+  1.926e-10  5.216e-12  4.140e-04 -1.332e-03  1.250e-05  1.209e-05 
+ -3.463e-09 -1.044e-09 -1.332e-03  1.947e-02 -2.365e-04 -1.096e-04 
+  9.731e-11  6.161e-11  1.250e-05 -2.365e-04  6.546e-06  1.162e-06 
+  1.687e-11  1.398e-12  1.209e-05 -1.096e-04  1.162e-06  9.757e-07 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.98417   1.000  0.891  0.167 -0.438  0.671  0.301
+        2  0.97492   0.891  1.000  0.003 -0.102  0.328  0.019
+        3  0.60347   0.167  0.003  1.000 -0.469  0.240  0.601
+        4  0.87310  -0.438 -0.102 -0.469  1.000 -0.663 -0.795
+        5  0.90431   0.671  0.328  0.240 -0.663  1.000  0.460
+        6  0.84451   0.301  0.019  0.601 -0.795  0.460  1.000
+[#1] INFO:InputArguments -- RooAbsData::plotOn(db) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun3_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun3_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+Reduced ChiSq: 2579.36 / 93
+Kolmogorov-Smirnov test result:1.83642e-12
+#splitline{#Alpha_{1} IG(x^{#eta},#mu_{1} , #lambda_{1})}{ + #Alpha_{2} IG(x^{#eta},#mu_{2},#lambda_{2})}
+#Alpha_{1} = 9.15e-07 +- 5.67e-08
+#Alpha_{2} = 1.49e-06 +- 7.34e-08
+#lambda_{1} = 1.00e+00 +- 2.03e-02
+#lambda_{2} = 7.98e+00 +- 1.40e-01
+#mu_{1} = 2.49e-01 +- 2.56e-03
+#mu_{2} = 4.22e-01 +- 9.88e-04
+Using the database db and model sigAdd4
+Number events: 86371
+Number events after cuts: 63649
+TFile**		temp.root	
+ TFile*		temp.root	
+  KEY: RooDataHist	db;1	db
+  KEY: TProcessID	ProcessID0;1	4b6d8a36-47ce-11ec-96d6-57a8a983beef
+  KEY: RooAddPdf	sigAdd4;1	GP Beams. 1 Inv. Gauss
+  KEY: RooRealVar	bsx;1	Fractional #sqrt{s} [1 - #sqrt{s}/(250 GeV)]^{#eta}
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun4_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Alpha_1      1.00000e+00  5.00000e-01    1.00000e-09  1.00000e+04
+     2 lambda_1     1.00000e+00  5.00000e-01    0.00000e+00  2.00000e+01
+     3 mu_1         5.00000e+00  2.50000e+00    0.00000e+00  5.00000e+01
+ **********
+ **    3 **SET ERR           1
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        1500           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=977174 FROM MIGRAD    STATUS=INITIATE       48 CALLS          49 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      4.43243e-01   5.00000e-01   0.00000e+00  -1.16415e-10
+   2  lambda_1     1.00000e+00   5.00000e-01   0.00000e+00   8.25235e+06
+   3  mu_1         1.12665e+00   2.50000e+00  -3.42142e-01   1.06204e+07
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.53436e+07) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Alpha_1=4199.91	lambda_1=0.259725	mu_1=0.00290204
+RooChi2Var::chi2_sigAdd4_db[ paramSet=(% Signal,Alpha_1,lambda_1,mu_1) ]
+     function value is NAN @ paramSet=(% Signal = 1,Alpha_1 = 4199.91,lambda_1 = 0.259725,mu_1 = 0.00290204)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (1.53436e+07) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Alpha_1=4199.91	lambda_1=0.259725	mu_1=0.00290204
+RooChi2Var::chi2_sigAdd4_db[ paramSet=(% Signal,Alpha_1,lambda_1,mu_1) ]
+     function value is NAN @ paramSet=(% Signal = 1,Alpha_1 = 4199.91,lambda_1 = 0.259725,mu_1 = 0.00290204)
+
+ MINUIT WARNING IN MIGRAD  
+ ============== Negative diagonal element 3 in Error Matrix
+ MINUIT WARNING IN MIGRAD  
+ ============== 1 added to diagonal of error matrix
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 1
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter1
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=63057 FROM HESSE     STATUS=FAILED          7 CALLS         108 TOTAL
+                     EDM=7.64027e+06    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      4.19991e+03   7.07107e-01  -0.00000e+00   0.00000e+00
+   2  lambda_1     2.59725e-01   1.29924e+01  -0.00000e+00   0.00000e+00
+   3  mu_1         2.74397e-03   5.63841e-08   0.00000e+00  -1.81577e+10
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=63057 FROM MIGRAD    STATUS=FAILED        118 CALLS         119 TOTAL
+                     EDM=7.64027e+06    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      4.19991e+03   7.07107e-01  -0.00000e+00   0.00000e+00
+   2  lambda_1     2.59725e-01   1.29924e+01  -0.00000e+00   0.00000e+00
+   3  mu_1         2.74397e-03   5.63841e-08   0.00000e+00  -1.81577e+10
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  3    ERR DEF=1
+  5.000e-01  0.000e+00  0.000e+00 
+  0.000e+00  1.025e+01  0.000e+00 
+  0.000e+00  0.000e+00  3.179e-15 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3
+        1  0.00000   1.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000
+        3  0.00000   0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **    7 **SET ERR           1
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        1500
+ **********
+ MINUIT WARNING IN HESSE
+ ============== Second derivative zero for parameter1
+  MNHESS FAILS AND WILL RETURN DIAGONAL MATRIX. 
+ FCN=63057 FROM HESSE     STATUS=FAILED          7 CALLS         126 TOTAL
+                     EDM=7.64027e+06    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Alpha_1      6.71116e+03   2.51125e+03  -0.00000e+00   9.58549e+00
+   2  lambda_1     2.59725e-01   1.29924e+01  -0.00000e+00  -1.34239e+00
+   3  mu_1         2.74397e-03   5.63841e-08   0.00000e+00  -1.58561e+00
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  3    ERR DEF=1
+  5.000e-01  0.000e+00  0.000e+00 
+  0.000e+00  1.025e+01  0.000e+00 
+  0.000e+00  0.000e+00  3.179e-15 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3
+        1  0.00000   1.000  0.000  0.000
+        2  0.00000   0.000  1.000  0.000
+        3  0.00000   0.000  0.000  1.000
+ ERR MATRIX APPROXIMATE
+[#1] INFO:InputArguments -- RooAbsData::plotOn(db) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun4_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun4_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(invg1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+Reduced ChiSq: 63057 / 96
+Kolmogorov-Smirnov test result:0
+#Alpha_{1} IG(x^{#eta},#mu_{1} , #lambda_{1})
+#Alpha_{1} = 6.71e+03 +- 2.51e+03
+#lambda_{1} = 2.60e-01 +- 1.30e+01
+#mu_{1} = 2.74e-03 +- 5.64e-08
+Using the database db and model sigAdd5
+Number events: 86371
+Number events after cuts: 63649
+TFile**		temp.root	
+ TFile*		temp.root	
+  KEY: RooDataHist	db;1	db
+  KEY: TProcessID	ProcessID0;1	4b6d8a36-47ce-11ec-96d6-57a8a983beef
+  KEY: RooAddPdf	sigAdd5;1	GP Beams. 2 Beta
+  KEY: RooRealVar	bsx;1	Fractional #sqrt{s} [1 - #sqrt{s}/(250 GeV)]^{#eta}
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun5_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Alpha_1      1.00000e+00  5.00000e-01    1.00000e-09  1.00000e+04
+     2 Alpha_2      1.00000e-02  5.00000e-03    1.00000e-09  1.00000e+04
+     3 alpha_1      1.24000e+00  1.50000e-01    5.00000e-01  2.00000e+00
+     4 alpha_2      4.70000e-01  1.35000e-01    2.00000e-01  2.00000e+00
+     5 gamma_1      4.00000e+01  4.20000e+00    8.00000e+00  5.00000e+01
+     6 gamma_2      4.00000e+01  5.00000e+00    0.00000e+00  5.00000e+01
+ **********
+ **    3 **SET ERR           1
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        3000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=3371.81 FROM MIGRAD    STATUS=INITIATE       73 CALLS          74 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      1.00000e+00   5.00000e-01   0.00000e+00   4.58580e+04
+   2  Alpha_2      3.10938e-03   5.00000e-03   0.00000e+00  -8.22654e+05
+   3  alpha_1      1.24000e+00   1.50000e-01   0.00000e+00   4.58978e+04
+   4  alpha_2      4.70000e-01   1.35000e-01   0.00000e+00   2.91382e+03
+   5  gamma_1      4.00000e+01   4.20000e+00   0.00000e+00  -4.91339e+03
+   6  gamma_2      1.65348e-03   5.00000e+00  -2.22580e+00  -1.05341e-02
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -4.8714e-01 -7.7940e-05  4.7103e-03  3.5626e-01  1.5230e+00  4.6033e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.491741 TO DIAGONAL.
+ FCN=235.337 FROM MIGRAD    STATUS=CONVERGED    1166 CALLS        1167 TOTAL
+                     EDM=0.000202227    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Alpha_1      2.50952e+00   5.55389e-02   7.33906e-07   8.33379e+01
+   2  Alpha_2      7.91750e-04   1.72296e-05   7.48746e-07** at limit **
+   3  alpha_1      1.15442e+00   1.43827e-03   1.29689e-05   2.61989e-01
+   4  alpha_2      3.31527e-01   1.38322e-03   4.63972e-06   1.20300e+01
+   5  gamma_1      4.12714e+01   3.10635e-01   1.40064e-04   1.17915e-01
+   6  gamma_2      4.72280e+01   2.62392e+01   1.87480e-01  -3.19750e-04
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=1
+  3.085e-03 -8.707e-07  4.292e-05  6.997e-05  6.500e-03  2.129e+02 
+ -8.707e-07  2.969e-10 -1.331e-08 -2.169e-08 -2.016e-06 -6.597e-02 
+  4.292e-05 -1.331e-08  2.069e-06  1.070e-06  2.366e-04  3.256e+00 
+  6.997e-05 -2.169e-08  1.070e-06  1.913e-06  1.619e-04  5.302e+00 
+  6.500e-03 -2.016e-06  2.366e-04  1.619e-04  9.651e-02  4.926e+02 
+  2.129e+02 -6.597e-02  3.256e+00  5.302e+00  4.926e+02  1.569e+07 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.98519   1.000 -0.910  0.537  0.911  0.377  0.968
+        2  0.98468  -0.910  1.000 -0.537 -0.910 -0.377 -0.967
+        3  0.68165   0.537 -0.537  1.000  0.538  0.530  0.571
+        4  0.98520   0.911 -0.910  0.538  1.000  0.377  0.968
+        5  0.54566   0.377 -0.377  0.530  0.377  1.000  0.400
+        6  0.99781   0.968 -0.967  0.571  0.968  0.400  1.000
+ ERR MATRIX NOT POS-DEF
+ **********
+ **    7 **HESSE        3000
+ **********
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -2.0581e-01 -2.5895e-05  4.7076e-04  3.5648e-01  1.5226e+00  4.3263e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.210141 TO DIAGONAL.
+ FCN=235.337 FROM HESSE     STATUS=NOT POSDEF     42 CALLS        1209 TOTAL
+                     EDM=0.000371661    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Alpha_1      2.50952e+00   5.70244e-02   3.66953e-07  -1.53911e+00
+   2  Alpha_2      7.91750e-04   1.79273e-05   7.48746e-08  -1.57023e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   3  alpha_1      1.15442e+00   1.47924e-03   2.59378e-06  -1.27789e-01
+   4  alpha_2      3.31527e-01   1.42042e-03   9.27944e-07  -1.02336e+00
+   5  gamma_1      4.12714e+01   3.44432e-01   2.80127e-05   6.24080e-01
+   6  gamma_2      4.72280e+01   2.63476e+01   7.49920e-03   2.71789e+01
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=1
+  3.252e-03 -8.195e-07  2.325e-05  6.497e-05  3.978e-03  2.250e+02 
+ -8.195e-07  3.214e-10 -7.309e-09 -2.042e-08 -1.250e-06 -7.069e-02 
+  2.325e-05 -7.309e-09  2.188e-06  5.812e-07  2.731e-04  2.020e+00 
+  6.497e-05 -2.042e-08  5.812e-07  2.018e-06  9.926e-05  5.604e+00 
+  3.978e-03 -1.250e-06  2.731e-04  9.926e-05  1.186e-01  3.442e+02 
+  2.250e+02 -7.069e-02  2.020e+00  5.604e+00  3.442e+02  1.803e+07 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.98266   1.000 -0.802  0.276  0.802  0.203  0.929
+        2  0.98254  -0.802  1.000 -0.276 -0.802 -0.203 -0.929
+        3  0.61328   0.276 -0.276  1.000  0.277  0.536  0.322
+        4  0.98268   0.802 -0.802  0.277  1.000  0.203  0.929
+        5  0.54396   0.203 -0.203  0.536  0.203  1.000  0.235
+        6  0.99755   0.929 -0.929  0.322  0.929  0.235  1.000
+ ERR MATRIX NOT POS-DEF
+ **********
+ **    8 **SET ERR           1
+ **********
+ **********
+ **    9 **SET PRINT           1
+ **********
+ **********
+ **   10 **HESSE        3000
+ **********
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -1.9473e-01 -1.9255e-05  2.3669e-03  3.5656e-01  1.5226e+00  4.3132e+00
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 0.199047 TO DIAGONAL.
+ FCN=235.337 FROM HESSE     STATUS=NOT POSDEF     40 CALLS        1249 TOTAL
+                     EDM=0.000379472    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Alpha_1      2.50952e+00   5.74694e-02   3.66953e-07  -1.53911e+00
+   2  Alpha_2      7.91750e-04   1.78199e-05   3.74373e-07  -1.57023e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   3  alpha_1      1.15442e+00   1.48612e-03   5.18757e-07  -1.27789e-01
+   4  alpha_2      3.31527e-01   1.43141e-03   2.43987e-07  -1.02336e+00
+   5  gamma_1      4.12714e+01   3.46604e-01   5.60255e-06   6.24080e-01
+   6  gamma_2      4.72280e+01   2.67724e+01   1.49984e-03   2.71789e+01
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  6    ERR DEF=1
+  3.303e-03 -8.116e-07  2.259e-05  6.534e-05  3.889e-03  2.266e+02 
+ -8.116e-07  3.175e-10 -7.002e-09 -2.022e-08 -1.205e-06 -7.010e-02 
+  2.259e-05 -7.002e-09  2.209e-06  5.649e-07  2.774e-04  1.967e+00 
+  6.534e-05 -2.022e-08  5.649e-07  2.049e-06  9.705e-05  5.644e+00 
+  3.889e-03 -1.205e-06  2.774e-04  9.705e-05  1.202e-01  3.371e+02 
+  2.266e+02 -7.010e-02  1.967e+00  5.644e+00  3.371e+02  1.811e+07 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6
+        1  0.98277   1.000 -0.792  0.264  0.794  0.195  0.926
+        2  0.98216  -0.792  1.000 -0.264 -0.793 -0.195 -0.924
+        3  0.61332   0.264 -0.264  1.000  0.266  0.538  0.311
+        4  0.98279   0.794 -0.793  0.266  1.000  0.196  0.927
+        5  0.54613   0.195 -0.195  0.538  0.196  1.000  0.229
+        6  0.99754   0.926 -0.924  0.311  0.927  0.229  1.000
+ ERR MATRIX NOT POS-DEF
+[#1] INFO:InputArguments -- RooAbsData::plotOn(db) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun5_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(fun5_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta1_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta2_Int[bsx]) using numeric integrator RooIntegrator1D to calculate Int(bsx)
+Reduced ChiSq: 233.523 / 92
+Kolmogorov-Smirnov test result:1.65792e-10
+#splitline{#Alpha_{1} Beta(x^{#eta},#alpha_{1} , #gamma_{1})}{ + #Alpha_{2} Beta(x^{#eta},#alpha_{2},#gamma_{2})}
+#Alpha_{1} = 2.51e+00 +- 5.75e-02
+#Alpha_{2} = 7.92e-04 +- 1.78e-05
+#alpha_{1} = 1.15e+00 +- 1.49e-03
+#alpha_{2} = 3.32e-01 +- 1.43e-03
+#eta = 6.00e+00 +- 0.00e+00
+#gamma_{1} = 4.13e+01 +- 3.47e-01
+#gamma_{2} = 4.72e+01 +- 2.68e+01
+[0mroot [3] .>
+[0m

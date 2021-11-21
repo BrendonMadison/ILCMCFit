@@ -1,0 +1,435 @@
+[0mroot [2] .x ISRTailFit.C
+[0m
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+[#0] ERROR:InputArguments -- RooUniformBinning::setRange: ERROR low bound > high bound
+[#0] WARNING:InputArguments -- RooRealVar::setRange(alpha): Proposed new fit max. smaller than min., setting max. to min.
+Dumped histogram contents to sqrts100.csv
+Dumped histogram contents to sqrts200.csv
+Dumped histogram contents to sqrtsfrac100.csv
+Dumped histogram contents to sqrtsfrac200.csv
+Using the database db and model sigAdd
+Number events: 556702
+Number events after cuts: 556702
+TFile**		temp.root	
+ TFile*		temp.root	
+  KEY: RooDataHist	db;1	db
+  KEY: TProcessID	ProcessID0;1	937632b0-47dd-11ec-82e7-57a8a983beef
+  KEY: RooAddPdf	sigAdd;1	Muon Free Kuraev-Fadin Tail Fit #sqrt{s}
+  KEY: RooRealVar	sqrts;1	#sqrt{s} [GeV]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(KF_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Epsilon      2.50000e+02  2.00000e+00    2.40000e+02  2.60000e+02
+     2 Mu           1.05700e-01  2.49995e-02    5.00000e-06  2.50000e-01
+ **********
+ **    3 **SET ERR           1
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        1000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+[#0] WARNING:Integration -- RooIntegrator1D::integral: integral of KF over range (150,249.9) did not converge after 20 steps
+   [1] h = 1 , s = 0.267226
+   [2] h = 0.25 , s = 0.805582
+   [3] h = 0.0625 , s = 1.35865
+   [4] h = 0.015625 , s = 1.93206
+   [5] h = 0.00390625 , s = 2.52881
+   [6] h = 0.000976562 , s = 3.16216
+   [7] h = 0.000244141 , s = 3.8727
+   [8] h = 6.10352e-05 , s = 4.79658
+   [9] h = 1.52588e-05 , s = 6.84709
+   [10] h = 3.8147e-06 , s = 5.93076
+   [11] h = 9.53674e-07 , s = 7.93575
+   [12] h = 2.38419e-07 , s = 7.04031
+   [13] h = 5.96046e-08 , s = 8.90188
+   [14] h = 1.49012e-08 , s = 8.07248
+   [15] h = 3.72529e-09 , s = 9.52361
+   [16] h = 9.31323e-10 , s = 8.88157
+   [17] h = 2.32831e-10 , s = 9.62338
+   [18] h = 5.82077e-11 , s = 10.6855
+   [19] h = 1.45519e-11 , s = 15.1212
+   [20] h = 3.63798e-12 , s = 13.0691
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (146325) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Epsilon=249.641	Mu=0.1057
+RooChi2Var::chi2_sigAdd_db[ paramSet=(% Signal,Epsilon,Mu,alpha) ]
+     function value is NAN @ paramSet=(% Signal = 1,Epsilon = 249.641,Mu = 0.1057,alpha = 0.000729927)
+RooAddPdf::sigAdd[ % Signal * KF ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(KF = -nan/13.0691), !coefficients=(% Signal = 1)
+RooGenericPdf::KF[ actualVars=(beta,sqrts,Epsilon) formula="x[0]/16 * ((8 + 3*x[0])*(1-x[1]/x[2])^(x[0]/2 - 1) - 4*(1+x[1]/x[2]))" ]
+     p.d.f value is Not-a-Number @ actualVars=(beta = 0.00675394/0.653124,sqrts = 249.65,Epsilon = 249.641)
+
+ FCN=16577.4 FROM MIGRAD    STATUS=INITIATE       36 CALLS          37 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Epsilon      2.50120e+02   2.00000e+00   0.00000e+00  -3.74881e+05
+   2  Mu           1.58416e-03   2.49995e-02  -1.57488e+00   1.87532e+04
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=15274.8 FROM MIGRAD    STATUS=CONVERGED      65 CALLS          66 TOTAL
+                     EDM=7.21458e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Epsilon      2.50184e+02   2.13880e-03   1.28294e-05  -3.61190e+01
+   2  Mu           1.98600e-03   3.66735e-05   9.92189e-05  -5.09064e+00
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  2    ERR DEF=1
+  4.574e-06  8.229e-09 
+  8.229e-09  1.345e-09 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2
+        1  0.10491   1.000  0.105
+        2  0.10491   0.105  1.000
+ **********
+ **    7 **SET ERR           1
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        1000
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=15274.8 FROM HESSE     STATUS=OK             10 CALLS          76 TOTAL
+                     EDM=7.21444e-05    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Epsilon      2.50184e+02   2.13879e-03   2.56587e-06   1.84382e-02
+   2  Mu           1.98600e-03   3.66733e-05   1.98438e-05  -1.74907e+00
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  2    ERR DEF=1
+  4.574e-06  8.225e-09 
+  8.225e-09  1.345e-09 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2
+        1  0.10486   1.000  0.105
+        2  0.10486   0.105  1.000
+[#1] INFO:InputArguments -- RooAbsData::plotOn(db) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(KF_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(KF_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+Reduced ChiSq: 17001.2 / 196
+Kolmogorov-Smirnov test result:0.979454
+KF(#sqrt{s},m_{l},#Epsilon,#alpha)
+#Epsilon = 2.50e+02 +- 2.14e-03
+#Mu = 1.99e-03 +- 3.67e-05
+#alpha = 7.30e-04 +- 0.00e+00
+Using the database db and model sigAdd2
+Number events: 556702
+Number events after cuts: 556702
+TFile**		temp.root	
+ TFile*		temp.root	
+  KEY: RooDataHist	db;1	db
+  KEY: TProcessID	ProcessID0;1	937632b0-47dd-11ec-82e7-57a8a983beef
+  KEY: RooAddPdf	sigAdd2;1	Muon Free Nicrosini-Trentadue Tail Fit #sqrt{s}
+  KEY: RooRealVar	sqrts;1	#sqrt{s} [GeV]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(NT_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Epsilon      2.50000e+02  2.00000e+00    2.40000e+02  2.60000e+02
+     2 Mu           1.05700e-01  2.49995e-02    5.00000e-06  2.50000e-01
+     3 dl           1.00000e+00  5.00000e-01    0.00000e+00  5.00000e+02
+ **********
+ **    3 **SET ERR           1
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        1500           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (4.97793e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Epsilon=248	Mu=0.1057	dl=1
+RooChi2Var::chi2_sigAdd2_db[ paramSet=(% Signal,Epsilon,Mu,alpha,dl) ]
+     function value is NAN @ paramSet=(% Signal = 1,Epsilon = 248,Mu = 0.1057,alpha = 0.000729927,dl = 1)
+RooAddPdf::sigAdd2[ % Signal * NT ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/0.427555), !coefficients=(% Signal = 1)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/0.427555), !coefficients=(% Signal = 1)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/0.427555), !coefficients=(% Signal = 1)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/0.427555), !coefficients=(% Signal = 1)
+RooGenericPdf::NT[ actualVars=(dl,beta,sqrts,Epsilon) formula="(x[0])*x[1]*(x[2]/x[3])^(x[1]-1) - 0.5*x[1]*(2-x[2]/x[3]) + 0.125*x[1]*x[1]*((2-x[2]/x[3])*(3*log(1-x[2]/x[3]) - 4*log(x[2]/x[3])) - (4*log(1-x[2]/x[3]))/(x[2]/x[3]) - 6 + x[2]/x[3])" ]
+     p.d.f value is Not-a-Number @ actualVars=(dl = 1,beta = 0.00674835/0.653124,sqrts = 248.152,Epsilon = 248)
+     p.d.f value is Not-a-Number @ actualVars=(dl = 1,beta = 0.00675022/0.653124,sqrts = 248.651,Epsilon = 248)
+     p.d.f value is Not-a-Number @ actualVars=(dl = 1,beta = 0.00675208/0.653124,sqrts = 249.151,Epsilon = 248)
+     p.d.f value is Not-a-Number @ actualVars=(dl = 1,beta = 0.00675394/0.653124,sqrts = 249.65,Epsilon = 248)
+
+ FCN=2.3118e+06 FROM MIGRAD    STATUS=INITIATE      111 CALLS         112 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Epsilon      2.49905e+02   2.00000e+00  -5.91406e-06  -1.47226e+08
+   2  Mu           4.10140e-03   2.49995e-02   0.00000e+00  -3.35267e+06
+   3  dl           1.00000e+00   5.00000e-01   0.00000e+00  -7.64626e+06
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 1 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 316985 added to diagonal of error matrix
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=844730 FROM HESSE     STATUS=OK             16 CALLS         296 TOTAL
+                     EDM=124688    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Epsilon      2.49905e+02   1.48987e+01   1.54814e-04   4.99362e+02
+   2  Mu           5.00000e-06   6.11891e-11   1.40432e-05** at limit **
+   3  dl           5.00000e+02   7.88635e-04   1.07487e-01** at limit **
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (7.58813e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Epsilon=248.841	Mu=5e-06	dl=499.995
+RooChi2Var::chi2_sigAdd2_db[ paramSet=(% Signal,Epsilon,Mu,alpha,dl) ]
+     function value is NAN @ paramSet=(% Signal = 1,Epsilon = 248.841,Mu = 5e-06,alpha = 0.000729927,dl = 499.995)
+RooAddPdf::sigAdd2[ % Signal * NT ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/988.386), !coefficients=(% Signal = 1)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/988.386), !coefficients=(% Signal = 1)
+RooGenericPdf::NT[ actualVars=(dl,beta,sqrts,Epsilon) formula="(x[0])*x[1]*(x[2]/x[3])^(x[1]-1) - 0.5*x[1]*(2-x[2]/x[3]) + 0.125*x[1]*x[1]*((2-x[2]/x[3])*(3*log(1-x[2]/x[3]) - 4*log(x[2]/x[3])) - (4*log(1-x[2]/x[3]))/(x[2]/x[3]) - 6 + x[2]/x[3])" ]
+     p.d.f value is Not-a-Number @ actualVars=(dl = 499.995,beta = 0.0160076/1.57775,sqrts = 249.151,Epsilon = 248.841)
+     p.d.f value is Not-a-Number @ actualVars=(dl = 499.995,beta = 0.0160095/1.57775,sqrts = 249.65,Epsilon = 248.841)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (7.58813e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Epsilon=249.138	Mu=5e-06	dl=500
+RooChi2Var::chi2_sigAdd2_db[ paramSet=(% Signal,Epsilon,Mu,alpha,dl) ]
+     function value is NAN @ paramSet=(% Signal = 1,Epsilon = 249.138,Mu = 5e-06,alpha = 0.000729927,dl = 500)
+RooAddPdf::sigAdd2[ % Signal * NT ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/991.935), !coefficients=(% Signal = 1)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/991.935), !coefficients=(% Signal = 1)
+RooGenericPdf::NT[ actualVars=(dl,beta,sqrts,Epsilon) formula="(x[0])*x[1]*(x[2]/x[3])^(x[1]-1) - 0.5*x[1]*(2-x[2]/x[3]) + 0.125*x[1]*x[1]*((2-x[2]/x[3])*(3*log(1-x[2]/x[3]) - 4*log(x[2]/x[3])) - (4*log(1-x[2]/x[3]))/(x[2]/x[3]) - 6 + x[2]/x[3])" ]
+     p.d.f value is Not-a-Number @ actualVars=(dl = 500,beta = 0.0160076/1.57775,sqrts = 249.151,Epsilon = 249.138)
+     p.d.f value is Not-a-Number @ actualVars=(dl = 500,beta = 0.0160095/1.57775,sqrts = 249.65,Epsilon = 249.138)
+
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (7.58813e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Epsilon=248.389	Mu=5e-06	dl=500
+RooChi2Var::chi2_sigAdd2_db[ paramSet=(% Signal,Epsilon,Mu,alpha,dl) ]
+     function value is NAN @ paramSet=(% Signal = 1,Epsilon = 248.389,Mu = 5e-06,alpha = 0.000729927,dl = 500)
+RooAddPdf::sigAdd2[ % Signal * NT ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/983.048), !coefficients=(% Signal = 1)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/983.048), !coefficients=(% Signal = 1)
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(NT = nan/983.048), !coefficients=(% Signal = 1)
+RooGenericPdf::NT[ actualVars=(dl,beta,sqrts,Epsilon) formula="(x[0])*x[1]*(x[2]/x[3])^(x[1]-1) - 0.5*x[1]*(2-x[2]/x[3]) + 0.125*x[1]*x[1]*((2-x[2]/x[3])*(3*log(1-x[2]/x[3]) - 4*log(x[2]/x[3])) - (4*log(1-x[2]/x[3]))/(x[2]/x[3]) - 6 + x[2]/x[3])" ]
+     p.d.f value is Not-a-Number @ actualVars=(dl = 500,beta = 0.0160058/1.57775,sqrts = 248.651,Epsilon = 248.389)
+     p.d.f value is Not-a-Number @ actualVars=(dl = 500,beta = 0.0160076/1.57775,sqrts = 249.151,Epsilon = 248.389)
+     p.d.f value is Not-a-Number @ actualVars=(dl = 500,beta = 0.0160095/1.57775,sqrts = 249.65,Epsilon = 248.389)
+
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=844730 FROM MIGRAD    STATUS=FAILED        324 CALLS         325 TOTAL
+                     EDM=5.40353e+08    STRATEGY= 1  ERROR MATRIX UNCERTAINTY 100.0 per cent
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Epsilon      2.49902e+02   1.51044e-03   0.00000e+00  -3.28733e+04
+   2  Mu           5.00000e-06   6.11891e-11   0.00000e+00** at limit **
+   3  dl           5.00000e+02   7.88595e-04   0.00000e+00** at limit **
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  3    ERR DEF=1
+  2.281e-06  4.606e-23 -4.153e-14 
+  4.606e-23  4.242e-26 -1.020e-26 
+ -4.153e-14 -1.020e-26  1.283e-09 
+ERR MATRIX APPROXIMATE
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3
+        1  0.00000   1.000  0.000 -0.000
+        2  0.00000   0.000  1.000 -0.000
+        3  0.00000  -0.000 -0.000  1.000
+ ERR MATRIX APPROXIMATE
+ **********
+ **    7 **SET ERR           1
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        1500
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=844730 FROM HESSE     STATUS=OK             18 CALLS         343 TOTAL
+                     EDM=0.0039328    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Epsilon      2.49902e+02   9.77444e-04   3.20242e-04  -9.84942e-03
+   2  Mu           5.00000e-06   6.11986e-11   1.40431e-05  -1.57080e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   3  dl           5.00000e+02   7.14792e+00   1.07487e-01   1.57074e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  3    ERR DEF=1
+  9.554e-07 -9.858e-25 -3.301e-10 
+ -9.858e-25  4.243e-26 -9.329e-23 
+ -3.301e-10 -9.329e-23  1.169e-05 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3
+        1  0.00010   1.000 -0.000 -0.000
+        2  0.00000  -0.000  1.000 -0.000
+        3  0.00010  -0.000 -0.000  1.000
+[#1] INFO:InputArguments -- RooAbsData::plotOn(db) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(NT_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(NT_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+Reduced ChiSq: 844738 / 195
+Kolmogorov-Smirnov test result:0.724992
+NT(#sqrt{s},m_{l},#Epsilon,#alpha,#Delta_{l})
+#Epsilon = 2.50e+02 +- 9.77e-04
+#Mu = 5.00e-06 +- 6.12e-11
+#alpha = 7.30e-04 +- 0.00e+00
+#dl = 5.00e+02 +- 7.15e+00
+Using the database db and model sigAdd3
+Number events: 556702
+Number events after cuts: 556702
+TFile**		temp.root	
+ TFile*		temp.root	
+  KEY: RooDataHist	db;1	db
+  KEY: TProcessID	ProcessID0;1	937632b0-47dd-11ec-82e7-57a8a983beef
+  KEY: RooAddPdf	sigAdd3;1	Muon Free Jadach-Ward-Was Tail Fit #sqrt{s}
+  KEY: RooRealVar	sqrts;1	#sqrt{s} [GeV]
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(JWW_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:Minization -- RooMinimizer::optimizeConst: activating const optimization
+ **********
+ **    1 **SET PRINT           1
+ **********
+ **********
+ **    2 **SET NOGRAD
+ **********
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 Epsilon      2.50000e+02  2.00000e+00    2.40000e+02  2.60000e+02
+     2 Mu           1.05700e-01  2.49995e-02    5.00000e-06  2.50000e-01
+ **********
+ **    3 **SET ERR           1
+ **********
+ **********
+ **    4 **SET PRINT           1
+ **********
+ **********
+ **    5 **SET STR           1
+ **********
+ NOW USING STRATEGY  1: TRY TO BALANCE SPEED AGAINST RELIABILITY
+ **********
+ **    6 **MIGRAD        1000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+[#0] WARNING:Integration -- RooIntegrator1D::integral: integral of JWW over range (150,249.9) did not converge after 20 steps
+   [1] h = 1 , s = 0.538968
+   [2] h = 0.25 , s = 1.62214
+   [3] h = 0.0625 , s = 2.7317
+   [4] h = 0.015625 , s = 3.87873
+   [5] h = 0.00390625 , s = 5.06894
+   [6] h = 0.000976562 , s = 6.32798
+   [7] h = 0.000244141 , s = 7.73442
+   [8] h = 6.10352e-05 , s = 9.54977
+   [9] h = 1.52588e-05 , s = 13.482
+   [10] h = 3.8147e-06 , s = 11.7265
+   [11] h = 9.53674e-07 , s = 15.2762
+   [12] h = 2.38419e-07 , s = 13.6964
+   [13] h = 5.96046e-08 , s = 16.2639
+   [14] h = 1.49012e-08 , s = 15.1303
+   [15] h = 3.72529e-09 , s = 16.2873
+   [16] h = 9.31323e-10 , s = 17.5003
+   [17] h = 2.32831e-10 , s = 18.8499
+   [18] h = 5.82077e-11 , s = 20.5912
+   [19] h = 1.45519e-11 , s = 24.3971
+   [20] h = 3.63798e-12 , s = 22.6971
+RooMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (148525) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	Epsilon=249.644	Mu=0.1057
+RooChi2Var::chi2_sigAdd3_db[ paramSet=(% Signal,Epsilon,Mu,alpha) ]
+     function value is NAN @ paramSet=(% Signal = 1,Epsilon = 249.644,Mu = 0.1057,alpha = 0.000729927)
+RooAddPdf::sigAdd3[ % Signal * JWW ]
+     p.d.f value is Not-a-Number @ !refCoefNorm=(), !pdfs=(JWW = -nan/22.6971), !coefficients=(% Signal = 1)
+RooGenericPdf::JWW[ actualVars=(beta,alpha,sqrts,Epsilon) formula="(exp(x[0]/4 + x[1]/3.1415 * (3.1415*3.1415/3 - 0.5)) * exp(0.5772*x[0])/(ROOT::Math::tgamma(1+x[0])) * x[0]*(1-x[2]/x[3])^(x[0]-1))*(1+x[0]/2 - 0.5*(1-x[2]/x[3] * x[2]/x[3]) - x[0]*((1-x[2]/x[3])/2 + (1+3*x[2]*x[2]/(x[3]*x[3]))*log(x[2]/x[3])/8))" ]
+     p.d.f value is Not-a-Number @ actualVars=(beta = 0.00675394/0.653124,alpha = 0.000729927,sqrts = 249.65,Epsilon = 249.644)
+
+ FCN=17920.2 FROM MIGRAD    STATUS=INITIATE       36 CALLS          37 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Epsilon      2.50099e+02   2.00000e+00   0.00000e+00  -4.67216e+05
+   2  Mu           1.40335e-03   2.49995e-02  -1.56547e+00   2.72162e+04
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=15974.6 FROM MIGRAD    STATUS=CONVERGED      67 CALLS          68 TOTAL
+                     EDM=2.13428e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  Epsilon      2.50174e+02   2.10210e-03   1.28961e-05  -2.19115e+00
+   2  Mu           1.95690e-03   3.64009e-05   1.01473e-04  -2.51153e-01
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  2    ERR DEF=1
+  4.419e-06  8.397e-09 
+  8.397e-09  1.325e-09 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2
+        1  0.10974   1.000  0.110
+        2  0.10974   0.110  1.000
+ **********
+ **    7 **SET ERR           1
+ **********
+ **********
+ **    8 **SET PRINT           1
+ **********
+ **********
+ **    9 **HESSE        1000
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=15974.6 FROM HESSE     STATUS=OK             10 CALLS          78 TOTAL
+                     EDM=2.13045e-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  Epsilon      2.50174e+02   2.10209e-03   2.57921e-06   1.73521e-02
+   2  Mu           1.95690e-03   3.64006e-05   4.05893e-06  -1.74775e+00
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  2    ERR DEF=1
+  4.419e-06  8.394e-09 
+  8.394e-09  1.325e-09 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2
+        1  0.10970   1.000  0.110
+        2  0.10970   0.110  1.000
+[#1] INFO:InputArguments -- RooAbsData::plotOn(db) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(JWW_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(JWW_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+[#1] INFO:NumericIntegration -- RooRealIntegral::init(beta_Int[sqrts]) using numeric integrator RooIntegrator1D to calculate Int(sqrts)
+Reduced ChiSq: 17826.2 / 196
+Kolmogorov-Smirnov test result:0.978899
+JWW(#sqrt{s},m_{l},#Epsilon,#alpha)
+#Epsilon = 2.50e+02 +- 2.10e-03
+#Mu = 1.96e-03 +- 3.64e-05
+#alpha = 7.30e-04 +- 0.00e+00
+[0mroot [3] .>
+[0m
