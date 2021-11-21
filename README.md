@@ -12,6 +12,7 @@ Results:<br />
 6.) The energy spread was fitted to ~0.88 GeV using an underlying Gaussian distribution.<br />
 
 To do?:<br />
+0.) Fix the python plots as the axes aren't changing for the (1-sqrt(s)/250)^(1/eta) fits<br />
 1.) Get parameter correlation matrix and parameter variance<br />
 2.) Improve fit minimization<br />
 3.) Better characterize GP data for different GP settings<br />
