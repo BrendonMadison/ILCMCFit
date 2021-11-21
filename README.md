@@ -16,4 +16,4 @@ To do?:<br />
 2.) Improve fit minimization<br />
 3.) Better characterize GP data for different GP settings<br />
 4.) Try to determine what the artifact/resolution looking feature in the upper tail region of the (1-sqrt(s)/250)^(1/eta) distribution in the ILCSOFT data is.<br />
-5.) Try to edit code to be feasibly to run on a computing cluster. This could be a solution to improving the minimization... just brute force on a cluster haha<br />
+5.) Try to edit code to be feasible to run on a computing cluster. This could be a solution to improving the minimization... just brute force on a cluster haha<br />
