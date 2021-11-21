@@ -2,7 +2,7 @@
 Includes various files on analyzing Guinea Pig (GP) simulation data to characterize beamstrahlung, analyzing ILCSOFT dimuon data to characterize ISR and sqrt(s), and then a Monte-Carlo (MC) fitting program that uses the previous fits and analysis to fit for sqrt(s) in a way that allows us to back out the energy spread and contributions from beamstrahlung and ISR.
 
 Results:
-0.) Fitted GP data for various fits. Found in GPFracS directory. Focused on fitting (1-sqrt(s)/250)^(1/eta) with eta=6. This was so that sqrt(s) could be pulled out of the GP data fitting and used in the Monte-Carlo. 
+0.) Fitted GP data for various fits. Found in GPFracS directory. Focused on fitting (1-sqrt(s)/250)^(1/eta) with eta=6. This was so that sqrt(s) could be pulled out of the GP data fitting and used in the Monte-Carlo. \\
 1.) The GP best fit was 1 beta distribution with a 1/x^3 "background" function. Similar to this was the 2 beta distribution fit, which used more parameters for similar Chi2.
 2.) Fitted ILCSOFT data for three kinds of ISR distributions. Found in ISRTailFit directory. Kuraev-Fadin (KF) and Jadach-Ward-Was (JWW) performed similarly. JWW seems to be slightly better but unsure. So allowed the use of both in future code.
 3.) Created a Monte-Carlo algorithm, in python, to fit for both sqrt(s) and (1-sqrt(s)/250)^(1/eta) to roughly 1.5 reduced Chi2 in both.
